@@ -1,60 +1,60 @@
-import images from './images';
+import images from './images'
 
-const wines = [
+const individual = [
   {
-    title: 'Chapel Hill Shiraz',
-    price: '$56',
-    tags: 'AU | Bottle',
+    title: 'Biryani',
+    price: 'Rs 200',
+    tags: '1 plate| Non veg',
   },
   {
-    title: 'Catena Malbee',
-    price: '$59',
-    tags: 'AU | Bottle',
+    title: 'Chicken Momo',
+    price: 'Rs 100',
+    tags: '1 plate | Non veg',
   },
   {
-    title: 'La Vieillw Rose',
-    price: '$44',
-    tags: 'FR | 750 ml',
+    title: 'Burger',
+    price: 'Rs 200',
+    tags: '1 piece | Non veg',
   },
   {
-    title: 'Rhino Pale Ale',
-    price: '$31',
-    tags: 'CA | 750 ml',
+    title: 'Mushroom Pizza',
+    price: 'Rs 200',
+    tags: '1 set | veg',
   },
   {
-    title: 'Irish Guinness',
-    price: '$26',
-    tags: 'IE | 750 ml',
+    title: 'Chicken Pizza',
+    price: 'Rs 100',
+    tags: '1 plate| veg',
   },
-];
+]
 
-const cocktails = [
+const business = [
   {
-    title: 'Aperol Sprtiz',
-    price: '$20',
-    tags: 'Aperol | Villa Marchesi prosecco | soda | 30 ml',
+    title: 'Chana Andha',
+    price: 'Rs 60',
+    tags: 'Healthy | 1 plate | 1 egg',
   },
   {
-    title: "Dark 'N' Stormy",
-    price: '$16',
-    tags: 'Dark rum | Ginger beer | Slice of lime',
+    title: 'Puri Tarkari',
+    price: 'Rs 60',
+    tags: '6 puri | 1 cup tarkari',
   },
   {
-    title: 'Daiquiri',
-    price: '$10',
-    tags: 'Rum | Citrus juice | Sugar',
+    title: 'Aalu Paratha',
+    price: 'Rs 80 ',
+    tags: '6 set |delicious',
   },
   {
-    title: 'Old Fashioned',
-    price: '$31',
-    tags: 'Bourbon | Brown sugar | Angostura Bitters',
+    title: 'Roti Tarkari',
+    price: 'Rs 60',
+    tags: '4 roti | 1 cup tarkari',
   },
   {
-    title: 'Negroni',
-    price: '$26',
-    tags: 'Gin | Sweet Vermouth | Campari | Orange garnish',
+    title: 'Custome khaja set',
+    price: 'Rs 80',
+    tags: '2 samosha | Aachar | 1 cup tarkari|2 roti',
   },
-];
+]
 
 const awards = [
   {
@@ -77,6 +77,6 @@ const awards = [
     title: 'Outstanding Chef',
     subtitle: 'Lorem ipsum dolor sit amet, consectetur.',
   },
-];
+]
 
-export default { wines, cocktails, awards };
+export default { individual, business, awards }
