@@ -1,3 +1,5 @@
+# `1)All global Css in index.css and App.css inside src folder `
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
