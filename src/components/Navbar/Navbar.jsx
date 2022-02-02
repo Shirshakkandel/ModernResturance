@@ -3,17 +3,19 @@ import { GiHamburgerMenu } from 'react-icons/gi'
 import { MdOutlineRestaurantMenu } from 'react-icons/md'
 import useWindowSize from '../../hooks/useWindowSize'
 import images from '../../constants/images'
-import { NavbarStyled } from './Navbarstyles'
+import { NavbarFlexXbetweenYcenter } from './Navbarstyles'
 
 const Navbar = () => {
   const [toggleMenu, setToggleMenu] = React.useState(false)
-  const { width, height } = useWindowSize()
+  const { width } = useWindowSize()
 
   return (
-    <NavbarStyled className="app__navbar" width={width}>
+    <NavbarFlexXbetweenYcenter className="app__navbar" width={width}>
+      {/* 3 Components -logo,-links and -login at large screen*/}
       <div className="app__navbar-logo">
         <img src={images.gericht} alt="app__logo" />
       </div>
+
       <ul className="app__navbar-links">
         <li className="p__opensans">
           <a href="#home">Home</a>
@@ -42,7 +44,7 @@ const Navbar = () => {
         </a>
       </div>
 
-      {/* For small screen */}
+      {/* For small screen one toggle menu */}
       <div className="app__navbar-smallscreen">
         <GiHamburgerMenu color="#fff" fontSize={27} onClick={() => setToggleMenu(true)} style={{ cursor: 'pointer' }} />
         {toggleMenu && (
@@ -78,7 +80,7 @@ const Navbar = () => {
           </div>
         )}
       </div>
-    </NavbarStyled>
+    </NavbarFlexXbetweenYcenter>
   )
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 
 import { SubHeading, MenuItem } from '../../components'
+import { Fade, Slide } from 'react-awesome-reveal'
 import { data, images } from '../../constants'
 import './SpecialMenu.css'
 
@@ -12,27 +13,36 @@ const SpecialMenu = () => (
     </div>
 
     <div className="app__specialMenu-menu">
-      <div className="app__specialMenu-menu_wine  flex__center">
-        <p className="app__specialMenu-menu_heading">For Individual</p>
-        <div className="app__specialMenu_menu_items">
-          {data.individual.map((wine, index) => (
-            <MenuItem key={wine.title + index} title={wine.title} price={wine.price} tags={wine.tags} />
-          ))}
-        </div>
-      </div>
+      <Fade cascade damping={0.4} fraction={0.1}>
+        <Slide direction="left">
+          <div className="app__specialMenu-menu_wine  flex__center">
+            <p className="app__specialMenu-menu_heading">For Individual</p>
 
-      <div className="app__specialMenu-menu_img">
-        <img src={images.menu} alt="menu__img" />
-      </div>
+            <div className="app__specialMenu_menu_items">
+              {data.individual.map((wine, index) => (
+                <MenuItem key={wine.title + index} title={wine.title} price={wine.price} tags={wine.tags} />
+              ))}
+            </div>
+          </div>
+        </Slide>
 
-      <div className="app__specialMenu-menu_cocktails  flex__center">
-        <p className="app__specialMenu-menu_heading">Business(more than 5)</p>
-        <div className="app__specialMenu_menu_items">
-          {data.business.map((cocktail, index) => (
-            <MenuItem key={cocktail.title + index} title={cocktail.title} price={cocktail.price} tags={cocktail.tags} />
-          ))}
-        </div>
-      </div>
+        <Slide direction="down">
+          <div className="app__specialMenu-menu_img">
+            <img src={images.menu} alt="menu__img" />
+          </div>
+        </Slide>
+
+        <Slide direction="right">
+          <div className="app__specialMenu-menu_cocktails  flex__center">
+            <p className="app__specialMenu-menu_heading">Business(more than 5)</p>
+            <div className="app__specialMenu_menu_items">
+              {data.business.map((cocktail, index) => (
+                <MenuItem key={cocktail.title + index} title={cocktail.title} price={cocktail.price} tags={cocktail.tags} />
+              ))}
+            </div>
+          </div>
+        </Slide>
+      </Fade>
     </div>
 
     <div style={{ marginTop: 15 }}>
