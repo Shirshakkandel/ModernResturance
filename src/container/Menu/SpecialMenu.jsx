@@ -32,7 +32,7 @@ const SpecialMenu = () => (
           </div>
         </Slide>
 
-        <Slide direction="right">
+        <Slide direction="top">
           <div className="app__specialMenu-menu_cocktails  flex__center">
             <p className="app__specialMenu-menu_heading">Business(more than 5)</p>
             <div className="app__specialMenu_menu_items">
